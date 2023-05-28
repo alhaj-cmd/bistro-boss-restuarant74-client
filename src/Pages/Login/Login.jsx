@@ -97,7 +97,7 @@ const Login = () => {
                             <div className="form-control mt-6">
 
 {/* todo : make button disable for chaptch */}
-                                <input type="submit" disabled={false} className="btn btn-primary" value="login" />
+                                <input type="submit" disabled={disabled} className="btn btn-primary" value="login" />
                             </div>
                         </form>
                         <p><small>New Here ? <Link to='/signup'>Create an account</Link></small></p>
