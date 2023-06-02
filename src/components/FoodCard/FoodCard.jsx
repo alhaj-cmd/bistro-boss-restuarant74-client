@@ -14,8 +14,8 @@ const FoodCard = ({item}) => {
     const  navigate = useNavigate();
     const location = useLocation();
 
-     const handleAddtoCart = item => {
-      console.log(item);
+     const handleAddtoCart = () => {
+      // console.log(item);
       if(user && user.email){
         const cartItem = {menuItemId: _id, name, image, price, email: user.email }
         fetch('http://localhost:5000/carts',{
@@ -27,9 +27,9 @@ const FoodCard = ({item}) => {
         })
         .then(res => res.json())
         .then(data =>{
-          console.log(data);
+          // console.log(data);
           if(data.insertedId){
-            refetch(); // fefetch cart to update the number
+            refetch(); 
             Swal.fire({
               position:'top-end',
               icon:'successs',
