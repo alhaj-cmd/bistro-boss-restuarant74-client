@@ -13,6 +13,10 @@ import PrivetRoute from "./PrivetRoute";
 import DashBoard from "../Layout/DashBoard";
 import MyCart from "../Pages/DashBoards/MyCart/MyCart";
 import AllUser from "../Pages/DashBoards/AllUsers/AllUser";
+import AddItem from "../Pages/AddItem/AddItem";
+import AdminRoute from "./AdminRoute";
+import ManageItem from "../Layout/ManageItem";
+import Payment from "../Pages/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -56,8 +60,20 @@ export const router = createBrowserRouter([
 
             },
             {
+                path:"payment",
+                element:<Payment></Payment>
+            },
+            {
                 path:'allusers',
-                element:<AllUser></AllUser>
+                element:<AdminRoute><AllUser></AllUser></AdminRoute>
+            },
+            {
+                path:'addItem',
+                element:<AdminRoute><AddItem></AddItem></AdminRoute>
+            },
+            {
+                path:'manageitems',
+                element:<AdminRoute><ManageItem></ManageItem></AdminRoute>
             }
         ]
     }
